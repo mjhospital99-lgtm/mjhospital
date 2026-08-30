@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M J Hospital, Nandyal | Care with Compassion</title>
-    <meta name="description" content="M J Hospital in Nandyal offers advanced maternity care, laparoscopy, and gynecological services by Dr. Kandakam Jasmeen Sulthana. 24/7 emergency services available.">
-<meta name="keywords" content="M J Hospital Nandyal, Gynecologist in Nandyal, Maternity Hospital, Dr. K.Jasmeen Sulthana, Dr. Kandakam Jasmeen Sulthana, Dr. Jasmeen Sulthana, Laparoscopic Surgeon">
+    <title>M J Hospital, Nandyal | Multi-Specialty Care</title>
+    <meta name="description" content="M J Hospital in Nandyal provides comprehensive healthcare including Obstetrics & Gynecology, Pediatrics, Critical Care, and Laparoscopic Surgery. 24/7 emergency services available.">
+    <meta name="keywords" content="M J Hospital Nandyal, Multi-Specialty Hospital, Gynecologist, Pediatrician in Nandyal, Critical Care ICU, Dr. K.Jasmeen Sulthana, Maternity Hospital">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -108,6 +108,7 @@
             flex: 1;
             min-width: 300px;
         }
+        .hero-details h4 { color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-size: 14px;}
         .hero-details h2 { color: var(--blue); font-size: 34px; margin-bottom: 5px; }
         .hero-details h3 { color: var(--pink); font-size: 20px; margin-bottom: 15px; }
         .hero-details p { font-size: 17px; margin-bottom: 20px; }
@@ -135,7 +136,7 @@
         }
 
         /* Grids */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;}
         
         .card {
             background: var(--white); padding: 25px; border-radius: 12px;
@@ -147,10 +148,11 @@
         .card h4 { color: var(--blue); font-size: 20px; margin-bottom: 10px; }
 
         /* Insurance Image */
+        .insurance-container { max-width: 800px; margin: 0 auto; }
         .insurance-img { width: 100%; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
 
         /* Contact Details */
-        .contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; }
+        .contact-wrapper { display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto;}
         .contact-info, .map-container { flex: 1; min-width: 300px; }
         .contact-info p { font-size: 18px; margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px; }
         .contact-info i { color: var(--pink); font-size: 22px; margin-top: 3px; }
@@ -177,15 +179,15 @@
             <h1>M J <span>HOSPITAL</span></h1>
         </a>
         <nav>
-            <a href="#about">About MD</a>
-            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#departments">Departments</a>
             <a href="#facilities">Facilities</a>
             <a href="#insurance">Insurance</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero / Doctor Section -->
+    <!-- Hero / Leadership Section -->
     <section class="hero" id="about">
         <div class="hero-container">
             <div class="doctor-card">
@@ -194,56 +196,57 @@
             </div>
             
             <div class="hero-details">
+                <h4>Welcome to M J Hospital</h4>
                 <h2>Dr. KANDAKAM JASMEEN SULTHANA</h2>
                 <h3>MBBS, MS (OBG), LSS Laparoscopy (Netherlands)</h3>
                 <p><strong>Senior Obstetrician, Gynecologist & Laparoscopic Surgeon</strong><br>
-                Dedicated to providing compassionate healthcare, high-risk pregnancy support, and advanced laparoscopic care for women.</p>
+                M J Hospital is a comprehensive multi-specialty center delivering exceptional healthcare in Obstetrics, Pediatrics, and Critical Care, supported by a 24/7 dedicated medical team.</p>
                 
                 <div class="stats-badge">
-                    <i class="fas fa-baby-carriage"></i> 1750+ Successful Deliveries | 75%-80% Normal Deliveries
+                    <i class="fas fa-hospital-user"></i> Multi-Specialty Care | 24/7 Emergency & ICU
                 </div>
                 <br>
                 
-                <a href="https://wa.me/919063078981?text=Hi" class="btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Book OPD via WhatsApp
+                <a href="https://wa.me/919063078981?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment" class="btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Book Appointment via WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section" id="services">
-        <h2 class="section-title">Our Specialized Services</h2>
+    <!-- Departments Section -->
+    <section class="section" id="departments">
+        <h2 class="section-title">Our Specialized Departments</h2>
         <div class="grid-3">
             <div class="card">
-                <i class="fas fa-stethoscope"></i>
-                <h4>Obstetrics & Gynecology</h4>
-                <p>Comprehensive women's health care from adolescence through menopause.</p>
+                <i class="fas fa-baby"></i>
+                <h4>Pediatrics & Neonatology</h4>
+                <p>Expert pediatric care and fully-equipped NICU/PICU for premature and critically ill newborns and children.</p>
             </div>
             <div class="card">
-                <i class="fas fa-heartbeat"></i>
-                <h4>High-Risk Pregnancy</h4>
-                <p>Specialized monitoring and care for complex pregnancies to ensure safe deliveries.</p>
+                <i class="fas fa-heart-pulse"></i>
+                <h4>Critical Care (ICU)</h4>
+                <p>Advanced adult intensive care units managed by dedicated intensivists with 24/7 monitoring and life-support systems.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-person-pregnant"></i>
+                <h4>Obstetrics & Gynecology</h4>
+                <p>Comprehensive maternal care, high-risk pregnancy management, and normal delivery prioritization.</p>
             </div>
             <div class="card">
                 <i class="fas fa-microscope"></i>
                 <h4>Laparoscopic Surgery</h4>
-                <p>Advanced, minimally invasive surgical procedures ensuring quicker recovery times.</p>
+                <p>Minimally invasive surgical procedures ensuring precision, less pain, and quicker recovery times.</p>
             </div>
             <div class="card">
-                <i class="fas fa-baby"></i>
-                <h4>Infertility Treatment</h4>
-                <p>Compassionate care and advanced treatments to help you grow your family.</p>
+                <i class="fas fa-stethoscope"></i>
+                <h4>General Medicine & Trauma</h4>
+                <p>Round-the-clock emergency care, trauma stabilization, and routine adult medical management.</p>
             </div>
             <div class="card">
-                <i class="fas fa-notes-medical"></i>
-                <h4>Diabetes Management & GDM</h4>
-                <p>Expert management of Gestational Diabetes Mellitus and general diabetic care.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-user-nurse"></i>
-                <h4>Complete Maternity Care</h4>
-                <p>Dedicated pre-natal and post-natal care for the well-being of mother and child.</p>
+                <i class="fas fa-seedling"></i>
+                <h4>Infertility Clinic</h4>
+                <p>Compassionate fertility evaluations and advanced clinical treatments to help you grow your family.</p>
             </div>
         </div>
     </section>
@@ -254,23 +257,18 @@
         <div class="grid-3">
             <div class="card">
                 <i class="fas fa-procedures"></i>
-                <h4>Advanced Operation Theater</h4>
-                <p>State-of-the-art surgical equipment for safe and precise laparoscopic surgeries and C-sections.</p>
+                <h4>Advanced Operation Theaters</h4>
+                <p>State-of-the-art modular OTs equipped for general, laparoscopic, and critical emergency surgeries.</p>
             </div>
             <div class="card">
                 <i class="fas fa-clinic-medical"></i>
-                <h4>Modern ICU & Incubators</h4>
-                <p>Fully equipped intensive care units with modern ventilators and baby incubators.</p>
+                <h4>NICU, PICU & Adult ICU</h4>
+                <p>Multi-disciplinary intensive care units with modern ventilators, central oxygen, and baby incubators.</p>
             </div>
             <div class="card">
                 <i class="fas fa-pills"></i>
-                <h4>24/7 Pharmacy & Lab</h4>
-                <p>Round-the-clock availability of medicines and a highly advanced diagnostic laboratory.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-bed"></i>
-                <h4>Special AC & Non-AC Rooms</h4>
-                <p>Comfortable patient accommodations including modern special AC rooms and sharing wards.</p>
+                <h4>24/7 Pharmacy & Diagnostics</h4>
+                <p>Round-the-clock availability of critical medicines and a highly advanced computerized pathology lab.</p>
             </div>
         </div>
     </section>
@@ -278,8 +276,10 @@
     <!-- Insurance Section -->
     <section class="section" id="insurance">
         <h2 class="section-title">Cashless Insurance Facility</h2>
-        <p style="text-align: center; margin-bottom: 25px; font-size: 18px;">We offer <strong>Cashless Treatment at No Extra Cost</strong>. Empanelled with GIC Common Empanelment covering all major insurance companies.</p>
-        <img src="01.png" alt="GIC Common Empanelment with all Insurance Companies" class="insurance-img">
+        <div class="insurance-container">
+            <p style="text-align: center; margin-bottom: 25px; font-size: 18px;">We offer <strong>Cashless Treatment at No Extra Cost</strong>. Empanelled with GIC Common Empanelment covering all major insurance companies.</p>
+            <img src="01.png" alt="GIC Common Empanelment with all Insurance Companies" class="insurance-img">
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -292,7 +292,7 @@
                     <span><strong>OPD Timings:</strong><br> 
                     Morning: 10:00 AM - 02:00 PM<br>
                     Evening: 07:00 PM - 08:00 PM<br>
-                    (Emergency services available)</span>
+                    <span style="color: var(--pink); font-weight: bold;">(24/7 Emergency Services Available)</span></span>
                 </p>
                 <p>
                     <i class="fas fa-map-marker-alt"></i> 
