@@ -60,23 +60,62 @@
         }
         .btn:hover { background: var(--blue); transform: translateY(-2px); }
 
-        /* Hero Section */
+        /* Hero / Doctor Section */
         .hero {
-            background: linear-gradient(rgba(238, 247, 252, 0.9), rgba(238, 247, 252, 0.9)), url('mjlogologin.jpg') center/contain no-repeat;
+            background: var(--light-blue);
             padding: 60px 5%;
-            text-align: center;
             border-bottom: 5px solid var(--pink);
         }
-        .hero h2 { color: var(--blue); font-size: 40px; margin-bottom: 10px; }
-        .hero h3 { color: var(--pink); font-size: 24px; margin-bottom: 15px; }
-        .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 25px auto; }
+        .hero-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .doctor-card {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+        }
+        .doctor-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid var(--white);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: block;
+        }
+        .doctor-badge {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--pink);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .hero-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero-details h2 { color: var(--blue); font-size: 34px; margin-bottom: 5px; }
+        .hero-details h3 { color: var(--pink); font-size: 20px; margin-bottom: 15px; }
+        .hero-details p { font-size: 17px; margin-bottom: 20px; }
         
         .stats-badge {
             display: inline-block;
             background: var(--white);
             padding: 10px 20px;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             color: var(--blue);
             font-weight: bold;
             margin-bottom: 25px;
@@ -122,7 +161,8 @@
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; gap: 15px; }
             nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-            .hero h2 { font-size: 32px; }
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-details h2 { font-size: 28px; }
         }
     </style>
 </head>
@@ -135,7 +175,7 @@
             <h1>M J <span>HOSPITAL</span></h1>
         </a>
         <nav>
-            <a href="#about">About</a>
+            <a href="#about">About MD</a>
             <a href="#services">Services</a>
             <a href="#facilities">Facilities</a>
             <a href="#insurance">Insurance</a>
@@ -143,21 +183,30 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero / Doctor Section -->
     <section class="hero" id="about">
-        <h2>Dr. KANDAKAM JASMEEN SULTHANA</h2>
-        <h3>MBBS, MS (OBG), LSS Laparoscopy (Netherlands)</h3>
-        <p><strong>Managing Director & Lead Laparoscopic Surgeon</strong><br>
-        Expert in Obstetrics, Gynecology, High-Risk Pregnancies, and Maternity Care.</p>
-        
-        <div class="stats-badge">
-            <i class="fas fa-baby-carriage"></i> Over 988 Successful Deliveries | 75% - 80% Normal Deliveries
+        <div class="hero-container">
+            <div class="doctor-card">
+                <img src="dr-jasmeen.jpg" alt="Dr. Kandakam Jasmeen Sulthana">
+                <div class="doctor-badge">Managing Director</div>
+            </div>
+            
+            <div class="hero-details">
+                <h2>Dr. KANDAKAM JASMEEN SULTHANA</h2>
+                <h3>MBBS, MS (OBG), LSS Laparoscopy (Netherlands)</h3>
+                <p><strong>Senior Obstetrician, Gynecologist & Laparoscopic Surgeon</strong><br>
+                Dedicated to providing compassionate healthcare, high-risk pregnancy support, and advanced laparoscopic care for women.</p>
+                
+                <div class="stats-badge">
+                    <i class="fas fa-baby-carriage"></i> 1750+ Successful Deliveries | 75%-80% Normal Deliveries
+                </div>
+                <br>
+                
+                <a href="https://wa.me/919063078981?text=Hi%20I%20would%20like%20to%20book%20an%20OPD%20appointment" class="btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Book OPD via WhatsApp
+                </a>
+            </div>
         </div>
-        <br>
-        
-        <a href="https://wa.me/919063078981?text=Hi%20I%20would%20like%20to%20book%20an%20OPD%20appointment" class="btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> Book OPD via WhatsApp
-        </a>
     </section>
 
     <!-- Services Section -->
@@ -227,7 +276,7 @@
     <!-- Insurance Section -->
     <section class="section" id="insurance">
         <h2 class="section-title">Cashless Insurance Facility</h2>
-        <p style="text-align: center; margin-bottom: 25px; font-size: 18px;">We are proud to offer <strong>Cashless Treatment at No Extra Cost</strong>. Empanelled with GIC Common Empanelment covering all major insurance companies.</p>
+        <p style="text-align: center; margin-bottom: 25px; font-size: 18px;">We offer <strong>Cashless Treatment at No Extra Cost</strong>. Empanelled with GIC Common Empanelment covering all major insurance companies.</p>
         <img src="01.png" alt="GIC Common Empanelment with all Insurance Companies" class="insurance-img">
     </section>
 
@@ -264,7 +313,6 @@
             </div>
             
             <div class="map-container">
-                <!-- Embedded Google Map using the provided address -->
                 <iframe src="https://maps.google.com/maps?q=M%20J%20HOSPITAL,%20Sanjeeva%20Nagar,%20Nandyal&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -272,7 +320,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 M J Hospital, Nandyal. All Rights Reserved. Designed for GitHub Pages.</p>
+        <p>&copy; 2026 M J Hospital, Nandyal. All Rights Reserved.</p>
     </footer>
 
 </body>
