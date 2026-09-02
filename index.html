@@ -159,7 +159,35 @@
         .map-container iframe { width: 100%; height: 350px; border: 0; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
         /* Footer */
-        footer { background: var(--blue); color: var(--white); text-align: center; padding: 25px; }
+       /* footer { background: var(--blue); color: var(--white); text-align: center; padding: 25px; } */
+        /* Footer */
+        footer { 
+            background: var(--blue); 
+            color: var(--white); 
+            padding: 20px 5%; 
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* Pushes items to left and right */
+            align-items: center; /* Centers them vertically */
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        /* Mobile Responsive for Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                justify-content: center; /* Centers everything on small screens */
+                text-align: center;
+            }
+        }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
@@ -337,12 +365,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer>
-        <p>&copy; 2026 M J Hospital, Nandyal. All Rights Reserved.</p>
-<!-- Reliable Visitor Badge -->
-        <div style="margin-top: 15px;">
-            <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fmjhospital99-lgtm.github.io%2Fmjhospital%2F&label=Page%20Visits&labelColor=%230072BC&countColor=%23E4007C" alt="Page Visits">
+        <div class="footer-content">
+            <p>&copy; 2026 M J Hospital, Nandyal. All Rights Reserved.</p>
+            
+            <!-- Reliable Visitor Badge -->
+            <div class="visitor-badge">
+                <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fmjhospital99-lgtm.github.io%2Fmjhospital%2F&label=Page%20Visits&labelColor=%230072BC&countColor=%23E4007C" alt="Page Visits">
+            </div>
         </div>
     </footer>
 <!-- Visitor Counter Script -->
