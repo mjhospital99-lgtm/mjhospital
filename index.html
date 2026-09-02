@@ -168,6 +168,17 @@
             .hero-container { flex-direction: column; text-align: center; }
             .hero-details h2 { font-size: 28px; }
         }
+    /* Visitor Counter Style */
+        .visitor-count {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #b3d4fc; /* Light blue that looks good against the dark blue footer */
+            font-weight: 500;
+        }
+        .visitor-count i {
+            margin-right: 5px;
+            color: var(--pink);
+        }
     </style>
 </head>
 <body>
@@ -329,7 +340,28 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 M J Hospital, Nandyal. All Rights Reserved.</p>
+        <p class="visitor-count">
+            <i class="fas fa-eye"></i> Page Visits: <span id="visit-count">...</span>
+        </p>
     </footer>
+<!-- Visitor Counter Script -->
+    <script>
+        // We use counterapi.dev to store the count. 
+        // The URL format is: namespace / key
+        const counterUrl = 'https://api.counterapi.dev/v1/mjhospital99-nandyal/homepage';
 
+        fetch(counterUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Update the HTML with the actual count
+                document.getElementById('visit-count').innerText = data.count;
+            })
+            .catch(error => {
+                // Fallback in case of network issues
+                document.getElementById('visit-count').innerText = "Unavailable";
+            });
+    </script>
+</body>
+</html>
 </body>
 </html>
